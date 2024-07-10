@@ -40,7 +40,8 @@ class BishopBlackTest {
     @Test
     public void whenWayNotDiagonalThenImpossibleMoveException() {
         BishopBlack bishop = new BishopBlack(Cell.C1);
-        ImpossibleMoveException exception = assertThrows(ImpossibleMoveException.class, () -> bishop.way(Cell.C2));
+        ImpossibleMoveException exception = assertThrows(ImpossibleMoveException.class, () ->
+                bishop.way(Cell.C2));
         assertEquals("Could not move by diagonal from C1 to C2",
                 exception.getMessage()
         );
